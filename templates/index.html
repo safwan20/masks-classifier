@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<title>Mask Classifier</title>
+</head>
+<body>
+
+    <div class="header">
+    	<div class="logo">
+    		<img src="{{url_for('static', filename='mask-removebg-preview.ico')}}" height="200" width="200">
+    	</div>
+    	<div class="stream-buttons">
+    		<button onclick="StartStream()">Start Stream</button>
+			<button onclick="CloseStream()">Close Stream</button>
+    	</div>
+    </div>
+
+	<div class="container" id="main">
+	    <div class="row">
+	        <div class="col-lg-8  offset-lg-2">
+	            <h3 class="mt-5">Live Streaming</h3>
+	            <img src="{{ url_for('video_feed') }}" height="500" width="500">
+	        </div>
+	    </div>
+	</div>
+
+
+<script>	
+	function StartStream() {
+		var element = document.getElementById('main')
+		element.style.visibility = 'visible';
+	}
+
+	function CloseStream() {
+		var element = document.getElementById('main')
+		element.style.visibility = 'hidden';
+	}
+</script>
+
+
+</body>
+</html>

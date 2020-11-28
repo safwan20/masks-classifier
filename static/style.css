@@ -1,0 +1,32 @@
+        body {
+            background-color: black;   
+        }
+
+        .stream-buttons {
+            text-align: center;
+            margin-left: 500px;
+            margin-bottom: 100px;
+            display: inline-block;
+        }
+
+        button {
+            margin-left: 20px;
+            font-size: 32px;
+            border-radius: 10px;
+            color: white;
+            background-color: #1e8449
+        }
+
+        #main {
+            visibility: hidden;
+            text-align: center;
+        }
+
+        .header {
+        
+        }
+
+        
+        .logo {
+            display: inline-block;
+        }

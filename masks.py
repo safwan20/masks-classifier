@@ -1,42 +1,4 @@
-# import cv2
-# import numpy as np
-# from tensorflow import keras
-
-# model = keras.models.load_model('maskss.h5')
-# face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-# eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-
-
-# def detect(gray) :
-#     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-#     for (x, y, w, h) in faces :
-#         resized = gray[y:y+w,x:x+w]
-#         resized=cv2.resize(resized,(100,100))
-#         resized = np.expand_dims(resized,axis=0)
-#         # resized.reshape((1,100,100,3))
-#         normalized=resized/255.0
-#         result=model.predict(resized) 
-#         print(result)
-#     return frame  
-
-
-
-# video_capture = cv2.VideoCapture(0)
-# while True :
-#     _, gray = video_capture.read()
-#     # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-#     canvas = detect(gray)
-#     cv2.imshow("Video", canvas)
-#     if cv2.waitKey(1) & 0xFF == ord('q') :
-#         break
-
-# video_capture.release()
-# cv2.destroyAllWindows()
-
-
-
-
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import cv2
 import numpy as np
 
